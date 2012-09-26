@@ -1,0 +1,10 @@
+"""
+TODO: Docstring
+
+"""
+API_URL = 'https://pypispy.com/api/v1/'
+EMAIL = 'yourmail@example.com'
+API_KEY = 'your api key'
+SERVER_NAME = 'your server name'
+VENVS_DIR = 'path to your .virtualenvs folder'
+VENVS = ['venv1', 'venv2']

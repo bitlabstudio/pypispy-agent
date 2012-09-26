@@ -1,0 +1,24 @@
+"""
+If you want to run the tests, please create virtual environments first:
+
+    mkvirtualenv -p python2.7 pypispy_test1
+    pip install -r requirements_test.txt
+
+    mkvirtualenv -p python2.7 pypispy_test2
+    pip install -r requirements_test.txt
+
+Then change the ``VENVS_DIR`` path to the path that holds your virtual
+environments.
+
+Then deactivate any current environment and install mock globally:
+
+    deactivate
+    sudo pip install mock
+
+"""
+API_URL = 'https://localhost:8000/api/v1/'
+EMAIL = 'user@example.com'
+API_KEY = 'A7DHJF72AKLSDJl2LSDJLAJD92lALKJ'
+SERVER_NAME = 'skynet'
+VENVS = ['pypispy_test1', 'pypispy_test2']
+VENVS_DIR = '/path/to/your/.virtualenvs'

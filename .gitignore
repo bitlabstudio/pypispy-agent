@@ -1,0 +1,4 @@
+*.pyc
+error.log
+settings.py
+test_settings.py

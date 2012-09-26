@@ -1,0 +1,3 @@
+pypispy-pypi-test
+-e git://github.com/bitmazk/pypispy-github-test.git#egg=pypispy-github-test
+-e hg+http://bitbucket.org/mbrochh/pypispy-bitbucket-test#egg=pypispy-bitbucket
