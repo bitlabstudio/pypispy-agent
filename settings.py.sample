@@ -1,10 +1,22 @@
 """
-TODO: Docstring
+After cloning this repository please copy this `settings.py.sample` to
+`settings.py` and change the settings below according to your
+https://pypispy.com account.
 
 """
 API_URL = 'https://pypispy.com/api/v1/'
+
+# Enter the email address of your https://pypipsy.com account here
 EMAIL = 'yourmail@example.com'
+
+# Enter your API key here, see https://pypispy.com/app/settings/
 API_KEY = 'your api key'
+
+# Enter the server name you chose when adding your server to https://pypispy.com here
 SERVER_NAME = 'your server name'
+
+# Enter the path to your virtualenvs on this server (usually /home/username/.virtualenvs)
 VENVS_DIR = 'path to your .virtualenvs folder'
+
+# Enter the virtualenvs on this server that you would like to monitor
 VENVS = ['venv1', 'venv2']

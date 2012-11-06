@@ -1,5 +1,5 @@
 """
-Runs `pip freeze` for your venvs and sends the data to the pypispy.com API.
+Runs `pip freeze` for your venvs. Sends data to the https://pypispy.com API.
 
 """
 import json
