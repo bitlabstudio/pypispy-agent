@@ -17,7 +17,6 @@ Then deactivate any current environment and install mock globally:
 
 """
 API_URL = 'https://localhost:8000/api/v1/'
-EMAIL = 'user@example.com'
 API_KEY = 'A7DHJF72AKLSDJl2LSDJLAJD92lALKJ'
 SERVER_NAME = 'skynet'
 VENVS = ['pypispy_test1', 'pypispy_test2']

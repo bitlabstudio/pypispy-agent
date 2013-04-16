@@ -12,7 +12,6 @@ def create_agent():
         test_settings.SERVER_NAME,
         test_settings.VENVS,
         test_settings.VENVS_DIR,
-        test_settings.EMAIL,
         test_settings.API_KEY,
         test_settings.API_URL,)
     return agent
@@ -43,9 +42,6 @@ class PyPiSpyAgentTestCase(unittest.TestCase):
         self.assertEqual(agent.venvs_dir, test_settings.VENVS_DIR,
             msg="Init should set the virtual environment directory to '%s' but\
                 got '%s'" % (test_settings.VENVS_DIR, agent.venvs_dir))
-        self.assertEqual(agent.email, test_settings.EMAIL,
-            msg="Init should set the email to '%s' but got '%s'"\
-                % (test_settings.EMAIL, agent.email))
         self.assertEqual(agent.api_key, test_settings.API_KEY,
             msg="Init should set the api key to '%s' but got '%s'"\
                 % (test_settings.API_KEY, agent.api_key))
@@ -76,12 +72,10 @@ class PyPiSpyAgentTestCase(unittest.TestCase):
             test_settings.SERVER_NAME,
             test_settings.VENVS,
             test_settings.VENVS_DIR,
-            test_settings.EMAIL,
             test_settings.API_KEY)
         data = agent.inspect_venv(agent.venvs[0])
 
         server_name = data.get('server_name')
-        email = data.get('email')
         api_key = data.get('api_key')
         package_info = data.get('package_info')
 
@@ -91,9 +85,6 @@ class PyPiSpyAgentTestCase(unittest.TestCase):
         self.assertEqual(test_settings.API_KEY, api_key,
             msg="Expected api key to be '%s' but go '%s'"\
                 % (test_settings.API_KEY, api_key))
-        self.assertEqual(test_settings.EMAIL, email,
-            msg="Expected email to be '%s' but go '%s'"\
-                % (test_settings.EMAIL, email))
         self.assertEqual(package_info, self.expected_package_list,
             msg="Got wrong package info")
 
@@ -104,7 +95,6 @@ class PyPiSpyAgentTestCase(unittest.TestCase):
             test_settings.SERVER_NAME,
             test_settings.VENVS,
             test_settings.VENVS_DIR,
-            test_settings.EMAIL,
             test_settings.API_KEY)
         agent.run()
         # test if called for each virtual environment

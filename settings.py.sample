@@ -6,9 +6,6 @@ https://pypispy.com account.
 """
 API_URL = 'https://pypispy.com/api/v1/'
 
-# Enter the email address of your https://pypipsy.com account here
-EMAIL = 'yourmail@example.com'
-
 # Enter your API key here, see https://pypispy.com/app/settings/
 API_KEY = 'your api key'
 

@@ -13,7 +13,7 @@ import settings
 
 
 class PyPiSpyAgent():
-    def __init__(self, server_name, venvs, venvs_dir, email, api_key,
+    def __init__(self, server_name, venvs, venvs_dir, api_key,
                  api_url=None):
         """
         Sets some class attributes for convenience.
@@ -21,7 +21,6 @@ class PyPiSpyAgent():
         :param server_name: The SERVER_NAME setting.
         :param venvs: The VENVS setting.
         :param venvs_dir: The VENVS_DIR setting.
-        :param email: The EMAIL setting.
         :param api_key: The API_KEY setting.
         :param api_url: The API_URL setting.
 
@@ -29,7 +28,6 @@ class PyPiSpyAgent():
         self.server_name = server_name
         self.venvs = venvs
         self.venvs_dir = venvs_dir
-        self.email = email
         self.api_key = api_key
         self.api_url = api_url
 
@@ -81,7 +79,6 @@ class PyPiSpyAgent():
         url = '{0}error/'.format(self.api_url)
         post_data = {
             'date': str(datetime.now()),
-            'user':  self.email,
             'api_key': self.api_key,
             'server_name': self.server_name,
             'venv_name': venv,
@@ -121,7 +118,6 @@ class PyPiSpyAgent():
         package_list = self.get_package_list(venv)
 
         data = {
-            'email': self.email,
             'api_key': self.api_key,
             'server_name': self.server_name,
             'package_info': package_list,
@@ -149,7 +145,6 @@ if __name__ == "__main__":
         settings.SERVER_NAME,
         settings.VENVS,
         settings.VENVS_DIR,
-        settings.EMAIL,
         settings.API_KEY,
         settings.API_URL,
     )
